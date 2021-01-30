@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+			var x= parseFloat(window.prompt("Please enter the first card code number"));
+			switch (x){
+				case 0:
+					x = "Invalid";
+					break;
+				case 1:
+					x = "Prestige";
+					break;
+				case 2:
+					x = "Pentium Gold";
+					break;
+				case 3:
+					x = "Diamond";
+					break;
+				case 4:
+					x = "Gold";
+					break;
+				case 5:
+					x = "Normal";
+					break;
+				default:
+					x = "Unknown";
+			}
+			document.write ("<p>Your card type is \"" + x + "\".</p>")
+		</script>
+	</body>
+</html>
