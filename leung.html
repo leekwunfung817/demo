@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>Geometric Progression</h1>
+		<script>
+			function p(txt) {
+				document.write(txt);
+			}
+			function rt(rr,nn) {
+				var rrr = rr + 0
+				for (var i = 1; i < nn; i++) {
+					console.log(rrr)
+					rrr = rrr * rr;
+				}
+				console.log(rrr)
+				return rrr
+			}
+
+			var a = 1;
+			var r = 2;
+			var n = 10;
+			if (false) {
+				a = parseInt(window.prompt("Please enter the first term"));
+				r = parseInt(window.prompt("Please enter the ratio"));
+				n = parseInt(window.prompt("Please enter the number of term"));
+			}
+			if(isNaN(a)){
+				p( "Error, it is not a number");
+			}else{
+				p("First term: " + a + "");
+			}
+			p('<br>');
+			p("Ratio: " + r + "<br>");
+			p("No. of Terms: " + n + "<br>");
+			p('<br>');
+			cur = a + 0
+			sum = 0;
+			t1 = 'The Sequence: ';
+			for (var i = 0; i < n; i++) {
+				if (i>0) {
+					t1 = t1+',';
+				}
+				t1 = t1+cur;
+				sum += cur;
+
+				cur = cur * r;
+			}
+			p(t1);
+			p('<br>');
+			p('<br>');
+			p('The Sum of GP: '+sum);
+			p('<br>');
+			p('<br>');
+			
+			p('The Sum of GP from formula: '+(a*(rt(r,n)-1)/(r-1)));
+		</script>
+	</body>
+</html>
