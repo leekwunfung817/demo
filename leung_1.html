@@ -2,27 +2,26 @@
 <html>
 	<body>
 		<script>
-			var x= parseFloat(window.prompt("Please enter the first card code number"));
-			switch (x){
+			var cardCode = parseFloat(window.prompt("Please enter the first card code number"));
+			var cardType = 'Invalid';
+			switch (cardCode){
 				case 1:
-					x = "Prestige";
+					cardType = "Prestige";
 					break;
 				case 2:
-					x = "Pentium Gold";
+					cardType = "Pentium Gold";
 					break;
 				case 3:
-					x = "Diamond";
+					cardType = "Diamond";
 					break;
 				case 4:
-					x = "Gold";
+					cardType = "Gold";
 					break;
 				case 5:
-					x = "Normal";
+					cardType = "Normal";
 					break;
-				default:
-					x = "Invalid";
 			}
-			document.write ("<p>Your card type is \"" + x + "\".</p>")
+			document.write ("<p>Your card type is \"" + cardType + "\".</p>")
 		</script>
 	</body>
 </html>
