@@ -4,9 +4,6 @@
 		<script>
 			var x= parseFloat(window.prompt("Please enter the first card code number"));
 			switch (x){
-				case 0:
-					x = "Invalid";
-					break;
 				case 1:
 					x = "Prestige";
 					break;
@@ -23,7 +20,7 @@
 					x = "Normal";
 					break;
 				default:
-					x = "Unknown";
+					x = "Invalid";
 			}
 			document.write ("<p>Your card type is \"" + x + "\".</p>")
 		</script>
