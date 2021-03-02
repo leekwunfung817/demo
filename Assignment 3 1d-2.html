@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h2>The Array Content</h2>
+		<p id="demo"></p>
+		<script>
+			var numbers = [45, 144, 23, 18, 225];
+			txt = '';
+			txt += "<table border='1'>";
+			function myFunction(item, index) {
+				txt += "<tr>";
+
+				txt += "<td>";
+				txt += index;
+				txt += "</td>";
+
+				txt += "<td>";
+				txt += item;
+				txt += "</td>";
+
+				txt += "</tr>";
+			}
+			numbers.forEach(myFunction);
+			txt += "</table>";
+			document.getElementById("demo").innerHTML = txt;
+		</script>
+	</body>
+</html>
