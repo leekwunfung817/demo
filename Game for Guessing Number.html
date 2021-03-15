@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Game for Guessing Number</title>
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+			  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+		<style>
+			body {
+				padding:     		10px;			
+			}
+			
+			header {
+				text-align:  		center;
+				border:      		3px solid;
+				background-color:  	orange;
+				color:				black;
+			}
+		
+			#captionArea {
+				margin-top:			30px;
+				text-align:  		center;				
+			}
+			
+			#captionArea {
+				margin-top:			30px;
+				text-align:  		center;				
+			}
+			
+			#guessArea {
+				margin-top:			20px;
+				font-size:			15pt;
+				text-align:  		center;					
+			
+			}
+			
+			#result {
+				font-size:			14px;
+				font-weight:		bold;
+				color:				blue;
+				text-align:  		center;
+				
+			}
+			
+			#buttonArea1 {
+				display:			none;
+			}
+			
+			.right{
+				text-align:			right;
+			}
+			
+		</style>
+		<script>
+
+	
+		</script>	
+	</head>
+	
+	<body>
+		<script type="text/javascript">
+			// location.reload();
+			// window.close();
+			// window.open('.');
+			min = 1;
+			max = 100;
+			num = Math.floor(Math.random() * max) + min;
+			attemp = 0;
+			maxAttemp = 10;
+		</script>
+		<header>
+			<h1>Game for Guessing Number</h1>
+		</header>
+		
+		<div id="captionArea" style="display: none;">
+			<h3>Enter a number between 
+			   <span id="minArea"></span>
+			   and 
+			   <span id="maxArea"></span>
+			</h3>
+		</div>
+			
+		<div id="guessArea">
+			
+				<p>
+					<input type="number" id="guessNumber" class="right" style="width: 100px">
+				</p>
+				<div id="buttonArea1" style="display: none;">	
+					<button type="button" class="btn btn-danger btn-sm" id="stopBtn" onclick="
+						if (confirm('Are you sure you want to leave?')) {
+							setTimeout(window.close, 1000);
+						}
+					">Leave</button>
+					<button type="button" class="btn btn-secondary btn-sm" id="repeatBtn" onclick="location.reload();">Next Game</button>
+				</div>
+				<div id="buttonArea2">
+					<button type="button" class="btn btn-danger btn-sm" id="giveUpBtn" onclick="
+						if (confirm('Are you sure you want to quit this round?')) {
+							document.getElementById('buttonArea1').style.display = 'inline';
+							document.getElementById('buttonArea2').style.display = 'none';
+						}
+					">Give Up</button>
+					<button type="button" class="btn btn-primary btn-sm" id="guessBtn" onclick="
+						document.getElementById('guessNumber').focus();
+
+						ans = document.getElementById('guessNumber').value;
+						
+
+						attemp++;
+						console.log(ans,min,max);
+						if (attemp>maxAttemp) {
+							alert('You can only try '+maxAttemp+' times. \nGame over.\nThe answer is '+ans);
+							document.getElementById('guessNumber').value = num;
+							setTimeout(window.close, 1000);
+						} else if (ans > num) {
+							document.getElementById('captionArea').style.display = 'inline';
+							max = parseInt(ans) -1;
+							alert('Not match! The number is too large.');
+							console.log(ans,min,max);
+							document.getElementById('minArea').innerHTML = min;
+							document.getElementById('maxArea').innerHTML = max;
+						} else if (ans < num) {
+							document.getElementById('captionArea').style.display = 'inline';
+							min = parseInt(ans)+1;
+							alert('Not match! The number is too small.');
+							console.log(ans,min,max);
+							document.getElementById('minArea').innerHTML = min;
+							document.getElementById('maxArea').innerHTML = max;
+						} else if (ans == num) {
+							alert('Exact match! Congratulation.');
+						}
+						document.getElementById('guessNumber').value = '';
+					">Guess</button>
+				</div>
+			
+		</div>	
+		<script type="text/javascript">
+			document.getElementById('guessNumber').focus();
+		</script>
+		<div id="result">
+			
+		</div>		
+
+		
+	</body>
+
+</html>
+
+
