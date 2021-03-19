@@ -1,0 +1,31 @@
+<html>
+	<style>
+		body {
+			white-space: pre;
+		}
+	</style>
+	<script>
+		class Student {
+			constructor(studentNo, name,dob) {
+				this.studentNo = studentNo;
+				this.name = name;
+				this.dob = dob;
+				this.GPA = 0;
+			}
+			
+			toString() {
+				return 'Student number:'+this.studentNo+'\n'
+				+'Student Name:'+this.name+'\n'
+				+'Date of Birth:'+this.dob+'\n'
+				+'Student GPA:'+this.GPA+'\n'
+				;
+			}
+			addGPA(gpa) {
+				this.GPA += gpa;
+			}
+		}
+		let stud1 = new Student("0001", "Chan Wing Hong", "15/12/2001");
+		console.log( stud1.toString() );
+		document.write( stud1.toString() );
+	</script>
+</html>
