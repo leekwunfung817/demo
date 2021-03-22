@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- saved from url=(0113)https://ole.ouhk.edu.hk/course2015/its101_tma.nsf/0/99E17C56D966D51A482586710035424E//$File/Assg3-Q3d-source.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>Event Listener</title>
+	<script type="text/javascript">
+		function displayPosition() {
+			var y = window.scrollY;
+			var x = window.scrollX;
+			document.getElementById('y').innerHTML = y;
+			document.getElementById('x').innerHTML = x;
+		}
+		// setInterval(function() {
+		// 	displayPosition();
+		// },20);
+		function scrolling(act) {
+			console.log(act);
+			if (act == 'U') {
+				window.scrollBy(0,-100);
+			}
+			if (act == 'L') {
+				window.scrollBy(-100,0);
+			}
+			if (act == 'R') {
+				window.scrollBy(100,0);
+			}
+			if (act == 'D') {
+				window.scrollBy(0,100);
+			}
+			displayPosition();
+		}
+	</script>
+	<style>
+		body {
+			width: 2000px;
+		}
+		button {
+			background-color : orange;
+			width: 60px;
+		}
+		table.navButtons {
+			background-color: yellow;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+		}
+		.navButtons tr td {
+			border-color: red;
+			border-width: 5;
+			border-style: solid;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Testing Event Handler</h1>
+
+	<div id="navButtons">
+		
+
+	</div>
+
+	<table class="navButtons">
+		<tr>
+			<td colspan="3">
+				<b>Scroll Direction</b>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="scrolling('U')">Up</button></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><button onclick="scrolling('L')">Left</button></td>
+			<td></td>
+			<td><button onclick="scrolling('R')">Right</button></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="scrolling('D')">Down</button></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				X:<b id="x"></b>
+				Y:<b id="y"></b>
+			</td>
+		</tr>
+	</table>
+	
+	 
+	
+	<div id="main">
+	<h2>Corporate Training</h2>
+	<p>Business is becoming more global and increasingly competitive. To achieve a competitive advantage, executives need 
+	   to be able to think, act and react with a global perspective. They need to be able to manage effectively teams 
+	   comprised of different cultures to unleash the power of diversity and generate creativity and innovation.</p>
+
+	<p>Organisations today are faced with challenges in leadership, change management, talent retention, risk management 
+	   and business ethics compliance. Our executive education programmes can help executives cope with these challenges 
+	   by equipping them with the latest executive and soft skills, including entrepreneurship, leading to professional 
+	   and personal enrichment.</p>
+
+	<p>The School has assembled an experienced faculty made up of an inspiring mix of entrepreneurs, change agents and 
+	   innovators. All are expert in their fields with real-world, practical, hands-on experience of working with, 
+	   and consulting for, sizable organisations in a wide variety of industries. You will reflect on innovative 
+	   business and people management models, and gain the confidence you need to make an impact in your job.</p>
+
+	<p>Business is becoming more global and increasingly competitive. To achieve a competitive advantage, executives need 
+	   to be able to think, act and react with a global perspective. They need to be able to manage effectively teams 
+	   comprised of different cultures to unleash the power of diversity and generate creativity and innovation.</p>
+
+	<p>Organisations today are faced with challenges in leadership, change management, talent retention, risk management 
+	   and business ethics compliance. Our executive education programmes can help executives cope with these challenges 
+	   by equipping them with the latest executive and soft skills, including entrepreneurship, leading to professional 
+	   and personal enrichment.</p>
+
+	<p>The School has assembled an experienced faculty made up of an inspiring mix of entrepreneurs, change agents and 
+	   innovators. All are expert in their fields with real-world, practical, hands-on experience of working with, 
+	   and consulting for, sizable organisations in a wide variety of industries. You will reflect on innovative 
+	   business and people management models, and gain the confidence you need to make an impact in your job.</p>
+
+	<p>Business is becoming more global and increasingly competitive. To achieve a competitive advantage, executives need 
+	   to be able to think, act and react with a global perspective. They need to be able to manage effectively teams 
+	   comprised of different cultures to unleash the power of diversity and generate creativity and innovation.</p>
+
+	<p>Organisations today are faced with challenges in leadership, change management, talent retention, risk management 
+	   and business ethics compliance. Our executive education programmes can help executives cope with these challenges 
+	   by equipping them with the latest executive and soft skills, including entrepreneurship, leading to professional 
+	   and personal enrichment.</p>
+
+	<p>The School has assembled an experienced faculty made up of an inspiring mix of entrepreneurs, change agents and 
+	   innovators. All are expert in their fields with real-world, practical, hands-on experience of working with, 
+	   and consulting for, sizable organisations in a wide variety of industries. You will reflect on innovative 
+	   business and people management models, and gain the confidence you need to make an impact in your job.</p>
+
+	<p>Business is becoming more global and increasingly competitive. To achieve a competitive advantage, executives need 
+	   to be able to think, act and react with a global perspective. They need to be able to manage effectively teams 
+	   comprised of different cultures to unleash the power of diversity and generate creativity and innovation.</p>
+
+	<p>Organisations today are faced with challenges in leadership, change management, talent retention, risk management 
+	   and business ethics compliance. Our executive education programmes can help executives cope with these challenges 
+	   by equipping them with the latest executive and soft skills, including entrepreneurship, leading to professional 
+	   and personal enrichment.</p>
+
+	<p>The School has assembled an experienced faculty made up of an inspiring mix of entrepreneurs, change agents and 
+	   innovators. All are expert in their fields with real-world, practical, hands-on experience of working with, 
+	   and consulting for, sizable organisations in a wide variety of industries. You will reflect on innovative 
+	   business and people management models, and gain the confidence you need to make an impact in your job.</p>
+
+	<p>Business is becoming more global and increasingly competitive. To achieve a competitive advantage, executives need 
+	   to be able to think, act and react with a global perspective. They need to be able to manage effectively teams 
+	   comprised of different cultures to unleash the power of diversity and generate creativity and innovation.</p>
+
+	<p>Organisations today are faced with challenges in leadership, change management, talent retention, risk management 
+	   and business ethics compliance. Our executive education programmes can help executives cope with these challenges 
+	   by equipping them with the latest executive and soft skills, including entrepreneurship, leading to professional 
+	   and personal enrichment.</p>
+
+	<p>The School has assembled an experienced faculty made up of an inspiring mix of entrepreneurs, change agents and 
+	   innovators. All are expert in their fields with real-world, practical, hands-on experience of working with, 
+	   and consulting for, sizable organisations in a wide variety of industries. You will reflect on innovative 
+	   business and people management models, and gain the confidence you need to make an impact in your job.</p>
+	
+	
+	<p>The School has assembled an experienced faculty made up of an inspiring mix of entrepreneurs, change agents and 
+	   innovators. All are expert in their fields with real-world, practical, hands-on experience of working with, 
+	   and consulting for, sizable organisations in a wide variety of industries. You will reflect on innovative 
+	   business and people management models, and gain the confidence you need to make an impact in your job.</p>	
+	
+	</div>
+
+
+
+</body></html>
