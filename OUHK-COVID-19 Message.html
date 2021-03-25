@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>OUHK Website</title>
+		<style>
+			#messageArea {
+				color : red;
+				font-size : 12px;
+				text-align : right;
+			}
+		</style>
+	<script LANGUAGE = "JavaScript">
+		// Insert your code here
+		message = `In view of the latest development of the Novel Coronavirus (COVID-19) pandemic, the OUHK has stepped up precautionary measures and made special arrangements to assist members of the University community to face the challenges brought about by the outbreak in Hong Kong…..`;
+		messageBuf = {}
+		messageBuf.text = message + "";
+		delay = 500;
+		function scrolling() {
+			console.log('',messageBuf.text);
+			nextSpace = messageBuf.text.indexOf(" ");
+			if (nextSpace==-1) {
+				document.getElementById('messageArea').innerHTML += messageBuf.text;
+				messageBuf.text = '';
+			} else {
+				before = messageBuf.text.substring(0,nextSpace);
+				after = messageBuf.text.substring(nextSpace+1,messageBuf.text.length);
+				document.getElementById('messageArea').innerHTML += before+' ';
+				messageBuf.text = after + '';
+				setTimeout(scrolling,delay);
+			}
+		}
+		// setTimeout(scrolling,delay);
+	</script>
+	</head>
+	<body onload="scrolling()">
+		<div id="messageArea"></div>
+		<h1>Open University of Hong Kong</h1>
+		<h2>Online Learning Environment</h2>
+		<p>
+		Information ................
+		</p>
+	</body>
+</html>
